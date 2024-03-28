@@ -1,20 +1,12 @@
+import { useRoutes } from "react-router-dom";
 
-import { useLocation, useRoutes } from "react-router-dom";
-import { Provider as ReduxProvider } from "react-redux";
-
-import logo from './logo.svg';
-import './App.css';
-import { routes } from 'src/routes';
+import "./App.css";
+import { routes } from "./routes";
 
 function App() {
-
   const elements = useRoutes(routes);
 
-  return (
-    <ReduxProvider>
-      {elements}
-    </ReduxProvider>
-  );
+  return <>{elements}</>;
 }
 
 export default App;
